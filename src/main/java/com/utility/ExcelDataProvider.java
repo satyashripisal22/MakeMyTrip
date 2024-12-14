@@ -14,8 +14,7 @@ public class ExcelDataProvider {
 		File src = new File(System.getProperty("user.dir")+"\\Testdata\\exceldata.xlsx");
 		FileInputStream file = new FileInputStream(src);
 		
-		wb = new XSSFWorkbook(file);
-		
+		wb = new XSSFWorkbook(file);	
 	}
 	
 	public String getStringData(String sheetname, int row, int cell) {
@@ -25,7 +24,6 @@ public class ExcelDataProvider {
 	public double getNumericData(String sheetname, int row, int cell) {
 		return wb.getSheet(sheetname).getRow(row).getCell(cell).getNumericCellValue();
 	}
-	
 	
 	
 }
