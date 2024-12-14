@@ -29,12 +29,10 @@ public class BaseClass {
 //		options.addArguments("--headless");
 //		options.addArguments("--incognito");
 		driver = new ChromeDriver();
-		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.manage().window().maximize();
 		driver.get("https://www.makemytrip.com/");
 		return driver;
-		
 	}
 //	@AfterMethod
 //	public void TearDown() throws InterruptedException {
